@@ -52,28 +52,28 @@ const etapas = [
 const alimentos = [
     {
         id: 1,
-        nombre: "Cachorro",
-        detalle: "0 años",
+        nombre: "Alimento Cachorro",
+        detalle: "Alimento gatos 0 años/destete",
         imagen: "./imagenes/alimentobebe.png" ,
         precio: 11111
     },
     {
         id: 2,
-        nombre: "joven",
-        detalle: "7 meses",
+        nombre: "Alimento joven",
+        detalle: "Alimento gatos 7 meses",
         imagen: "./imagenes/alimento0.png" ,
         precio: 222222
     },
     {
         id: 3,
-        nombre: "adulto",
-        detalle: "3 años",
+        nombre: "Alimento adulto",
+        detalle: "Alimento gatos 3 años",
         imagen: "./imagenes/alimento1.png" ,
         precio: 33333
     },
     {
         id: 4,
-        nombre: "adulto mayor",
+        nombre: "Alimento adulto mayor",
         detalle: "7 años",
         imagen: "./imagenes/alimento7.png" ,
         precio: 4444
@@ -81,15 +81,15 @@ const alimentos = [
 
     {
        id: 5,
-        nombre: "senior",
-        detalle: "+12 años",
+        nombre: "Alimento senior",
+        detalle: "Alimento gatos +12 años",
         imagen: "./imagenes/alimento12.png" ,
         precio: 5555
     },
     {
        id: 6,
-        nombre: "geronte",
-        detalle: "+15 años",
+        nombre: "Alimento geronte",
+        detalle: "Alimento gatos +15 años",
         imagen: "./imagenes/alimento15.png" ,
         precio: 6666
     },
