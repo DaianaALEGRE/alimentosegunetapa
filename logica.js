@@ -1,8 +1,8 @@
 
 console.table(alimentos);
-const carrito = [];
+let carrito = [];
 let contenedor = document.getElementById("cats");
-
+let finalizarBtn= document.getElementById('finalizar');
 function renderizarAlimentos() {
     for (const alimento of alimentos) {
         contenedor.innerHTML += `
@@ -81,9 +81,32 @@ for (const objetc of almacenados) {
 
 //}
 
-let vaciarCarrito = document.getElementById("vaciar")
-vaciarCarrito.addEventListener("click", respuestaClick)
-function respuestaClick() { console.log("vaciarCarrito"); }
+//borra lo que esta dentro del tablabody
+
+finalizarBtn.onclick=()=>{
+carrito= [];
+document.getElementById('tablabody').innerHTML='' 
+;
+document.getElementById('total').innerText = 'Total a pagar $';
+Swal.fire({
+    title: 'Deseas finalizar la compra?',
+    text: "Ya no podras agregar productos!",
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Si!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Confirmamos tu compra!',
+        'Tu pedido esta siendo procesado.',
+        'success'
+      )
+    }
+  })
+
+}
 
 let CampoEdad = document.getElementById('edad');
 CampoEdad.onkeydown = () => console.log('sedetectp');
@@ -97,23 +120,14 @@ campoNombreGato.oninput = () => {
         campoNombreGato.style.color = 'red';
     }
 }
-//evento submit
-let formulario = document.getElementById('formulario');
-formulario.addEventListener('submit', validar);
-function validar(evento) {
-    if ((campoNombreGato.value == '') || (CampoEdad.value == '')) {
-        evento.preventDefault()
-        alert('ingresar nombre o edad de la mascota validos')
-    }
-}
-
 
 /*funcion para calcular la edad del gato en caso de tener uno*/
 let btnCalcularEdad = document.getElementById('btn-calcular-edad');
 btnCalcularEdad.addEventListener('click', function() {
   let edadEnAnios = parseFloat(CampoEdad.value);
   let edadEnCiclosDeVida = calcularEdadEnCiclosDeVida(edadEnAnios);
-  alert(`La edad de ${campoNombreGato.value} es ${edadEnAnios} años humanos y ${edadEnCiclosDeVida} años gatunos.`);
+  alert
+  (`La edad de ${campoNombreGato.value} es ${edadEnAnios} años humanos y ${edadEnCiclosDeVida} años gatunos.`);
 });
 
 function calcularEdadEnCiclosDeVida(edadEnAnios) {
@@ -126,3 +140,16 @@ function calcularEdadEnCiclosDeVida(edadEnAnios) {
   }
 }
 
+//evento submit
+let formulario = document.getElementById('btn-calcular-edad');
+formulario.addEventListener('button', validar);
+function validar(evento) {
+    if ((campoNombreGato.value == '') || (CampoEdad.value == '')|| (isNaN(CampoEdad.value)) ){
+        evento.preventDefault();
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingresa edad o nombre de la mascota válidos!',
+        });
+    }
+}
