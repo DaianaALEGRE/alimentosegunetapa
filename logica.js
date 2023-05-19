@@ -169,5 +169,3 @@ btnCalcularEdad.addEventListener('click', function () {
 
 
 
-
-
