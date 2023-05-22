@@ -113,10 +113,18 @@ CampoEdad.onkeydown = () => console.log('sedetectp');
 
 let campoNombreGato = document.getElementById('nombreGato');
 campoNombreGato.oninput = () => {
-    if (isNaN(campoNombreGato.value)) {
+    if (isNaN(campoNombreGato.value)&&(campoNombreGato.value.length <= 7)) {
         campoNombreGato.style.color = 'black';
-    } else {
+    } else{
         campoNombreGato.style.color = 'red';
+    }
+}
+
+CampoEdad.oninput = () => {
+    if ((CampoEdad.value.length <= 2)&& parseInt(CampoEdad.value) <= 30) {
+        CampoEdad.style.color = 'black';
+    } else{
+        CampoEdad.style.color = 'red';
     }
 }
 
@@ -160,7 +168,7 @@ btnCalcularEdad.addEventListener('click', function () {
                 background: '#fff url(/images/trees.png)',
                 backdrop: `
           rgba(0,0,123,0.4)
-          url("/images/nyan-cat.gif")
+          url("/images/cat-space.gif")
           left top
           no-repeat
         `

@@ -1,7 +1,30 @@
 *{
     margin: 0;
     padding: 0%;
+ 
+}
+h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+#finalizar{
+    margin: 100px;
 
 }
-
- 
+#formulario
+{ 
+    margin: 10px;
+color:rgba(57, 27, 85, 0.852);}
+#btn-calcular-edad
+{
+    color: white;
+    background: rgba(169, 79, 247, 0.849);
+        border: rgba(57, 27, 85, 0.852);
+       
+}
+#catImage
+ {
+    margin-left: 20px;
+    max-width: 500px;
+    max-height: 220px;
+ }

@@ -41,27 +41,26 @@
       <h4 id="total">Total a pagar $:</h4>
       <button id="finalizar" class="btn btn-success">Finalizar compra</button>
       <article id="cartas" class="row">
-        <div class="col-6">
+        <div class="col-8">
           <!--formulario-->
-          <h2>Calcula la edad de tu michi para seleccionar el producto más adecuado</h2>
+          <h3>Calcula la edad de tu gato para seleccionar el producto más adecuado</h3>
 
           <form id="formulario">
-
-            <input type="name" class="form-control" id="nombreGato" aria-describedby="edad">
-
+            <label for="name">Nombre de la mascota</label>
+            <input type="name" class="form-control" id="nombreGato" aria-describedby="nombreGato">
+            <label for="name">Edad</label>
             <input type="number" class="form-control" id="edad" aria-describedby="edad">
 
-            <input type="button" value=Calcular id="btn-calcular-edad">
+            <input type="button" value="Calcular" id="btn-calcular-edad">
           </form>
         </div>
-      
 
-      <!--api-->
-    
-        <div id="catImageContainer" class="col-4">
-          <img id="catImage" src="" alt="Imagen de gato"> 
+        <!--api-->
+        <div id="catImageContainer" class="col-2">
+          <img id="catImage" src="" alt="Imagen de gato">
           <h2>Amamos los michis!</h2>
-      </div></article>
+        </div>
+      </article>
   </section>
 
   <!-- JavaScript Bundle with Popper -->
