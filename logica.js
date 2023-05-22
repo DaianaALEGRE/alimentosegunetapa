@@ -138,7 +138,11 @@ btnCalcularEdad.addEventListener('click', function () {
     let formulario = document.getElementById('btn-calcular-edad');
     formulario.addEventListener('click', validar);
     function validar(e) {
-        if ((campoNombreGato.value == '') || (CampoEdad.value == '') || (isNaN(CampoEdad.value))) {
+        if ((campoNombreGato.value == '')
+            || (CampoEdad.value == '')
+            || (CampoEdad.value <= 0)
+            || (CampoEdad.value >= 30)
+            || (campoNombreGato.value.length >= 7)) {
             e.preventDefault();
             Swal.fire({
                 icon: 'error',
@@ -161,7 +165,7 @@ btnCalcularEdad.addEventListener('click', function () {
           no-repeat
         `
             })
-            ;
+                ;
         }
     }
 
